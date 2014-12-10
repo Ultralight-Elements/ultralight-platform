@@ -1,0 +1,58 @@
+{
+  "name": "ultralight-platform",
+  "version": "0.1.0",
+  "description": "custom element polyfill and DOM level 4 environment",
+  "keywords": [
+    "web-components",
+    "webcomponents",
+    "web components",
+    "web-component",
+    "webcomponent",
+    "web component",
+    "custom-elements",
+    "customelements",
+    "custom elements",
+    "custom-element",
+    "customelement",
+    "custom element",
+    "elements",
+    "element",
+    "polymer",
+    "x-tags"
+  ],
+  "main": "dist/ultralight-platform.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ultralight-Elements/ultralight-platform.git"
+  },
+  "dependencies": {
+    "document-register-element": "Ultralight-Elements/document-register-element"
+  },
+  "devDependencies": {
+    "browserify": "^7.0.0",
+    "document-register-element": "git://github.com/Ultralight-Elements/document-register-element",
+    "tape": "^3.0.3",
+    "uglify-js": "^2.4.16",
+    "zuul": "git://github.com/defunctzombie/zuul"
+  },
+  "author": [
+    {
+      "name": "The Ultralight-Elements Authors",
+      "url": "INSERT HOMEPAGE HERE"
+    }
+  ],
+  "license": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/jquery/jquery/blob/master/MIT-LICENSE.txt"
+    }
+  ],
+  "scripts": {
+    "build-max": "node_modules/browserify/bin/cmd.js --s ultralight-platform  src/ultralight-platform.js > dist/ultralight-platform.js",
+    "build-min": "node_modules/browserify/bin/cmd.js --s ultralight-platform  src/ultralight-platform.js | node_modules/uglify-js/bin/uglifyjs > dist/ultralight-platform.min.js",
+    "build-gz": "gzip -c9 dist/ultralight-platform.min.js > dist/ultralight-platform.min.js.gz",
+    "build": "npm run build-max && npm run build-min && npm run build-gz",
+    "test-local": "node_modules/zuul/bin/zuul --local 8080 --ui tape test/tests.js",
+    "test": "node_modules/zuul/bin/zuul -- test/tests.js"
+  }
+}
