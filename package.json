@@ -33,7 +33,7 @@
     "document-register-element": "git://github.com/Ultralight-Elements/document-register-element",
     "tape": "^3.0.3",
     "uglify-js": "^2.4.16",
-    "zuul": "git://github.com/defunctzombie/zuul"
+    "zuul": "^1.16.0"
   },
   "author": [
     {
