@@ -28,7 +28,7 @@ define({
     {browserName: 'firefox', version: '30'},
     {browserName: 'chrome', version: '34'},
     {browserName: 'safari', version: '6'},
-    {browserName: 'iphone', version: '6.1'},
+    {browserName: 'iphone', version: '7.1'},
     {browserName: 'android', version: '4.1'}
   ],
 
