@@ -31,6 +31,7 @@
   "devDependencies": {
     "browserify": "^7.0.0",
     "document-register-element": "git://github.com/Ultralight-Elements/document-register-element",
+    "intern": "^2.2.2",
     "tape": "^3.0.3",
     "uglify-js": "^2.4.16",
     "zuul": "^1.16.0"
@@ -51,8 +52,6 @@
     "build-max": "node_modules/browserify/bin/cmd.js --s ultralight-platform  src/ultralight-platform.js > dist/ultralight-platform.js",
     "build-min": "node_modules/browserify/bin/cmd.js --s ultralight-platform  src/ultralight-platform.js | node_modules/uglify-js/bin/uglifyjs > dist/ultralight-platform.min.js",
     "build-gz": "gzip -c9 dist/ultralight-platform.min.js > dist/ultralight-platform.min.js.gz",
-    "build": "npm run build-max && npm run build-min && npm run build-gz",
-    "test-local": "node_modules/zuul/bin/zuul --local 8080 --ui tape test/tests.js",
-    "test": "node_modules/zuul/bin/zuul -- test/tests.js"
+    "build": "npm run build-max && npm run build-min && npm run build-gz"
   }
 }
