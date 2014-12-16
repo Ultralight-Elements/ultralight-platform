@@ -1,25 +1,8 @@
 {
   "name": "ultralight-platform",
   "version": "0.1.0",
-  "description": "custom element polyfill and DOM level 4 environment",
-  "keywords": [
-    "web-components",
-    "webcomponents",
-    "web components",
-    "web-component",
-    "webcomponent",
-    "web component",
-    "custom-elements",
-    "customelements",
-    "custom elements",
-    "custom-element",
-    "customelement",
-    "custom element",
-    "elements",
-    "element",
-    "polymer",
-    "x-tags"
-  ],
+  "description": "custom element polyfill",
+
   "main": "dist/ultralight-platform.js",
   "repository": {
     "type": "git",
@@ -30,21 +13,36 @@
   },
   "devDependencies": {
     "browserify": "^7.0.0",
-    "document-register-element": "git://github.com/Ultralight-Elements/document-register-element",
     "intern": "^2.2.2",
-    "uglify-js": "^2.4.16"
+    "uglify-js": "^2.4.16",
+    "gulp": "^3.8.10",
+    "connect-redirection": "^0.0.1",
+    "browser-sync": "^1.7.2"
   },
-  "author": [
-    {
+  "author": {
       "name": "The Ultralight-Elements Authors",
       "url": "INSERT HOMEPAGE HERE"
-    }
-  ],
-  "license": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/jquery/jquery/blob/master/MIT-LICENSE.txt"
-    }
+  },
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/jquery/jquery/blob/master/MIT-LICENSE.txt"
+  },
+  "keywords": [
+    "web-components",
+    "webcomponents",
+    "web components",
+    "custom-elements",
+    "customelements",
+    "custom elements",
+    "elements",
+    "ultra-light",
+    "ultralight",
+    "ultralight-elements",
+    "ultralightelements",
+    "polymer",
+    "x-tags",
+    "bosonic",
+    "brick"
   ],
   "scripts": {
     "build-max": "node_modules/browserify/bin/cmd.js --s ultralight-platform  src/ultralight-platform.js > dist/ultralight-platform.js",
