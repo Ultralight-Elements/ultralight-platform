@@ -8,7 +8,8 @@
     "url": "https://github.com/Ultralight-Elements/ultralight-platform.git"
   },
   "dependencies": {
-    "document-register-element": "Ultralight-Elements/document-register-element"
+    "document-register-element": "Ultralight-Elements/document-register-element",
+    "dom4": "^1.0.1"
   },
   "devDependencies": {
     "browserify": "^7.0.0",

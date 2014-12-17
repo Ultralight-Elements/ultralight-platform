@@ -34,8 +34,7 @@ define({
     {browserName: 'iphone', version: '7.1'},
     {browserName: 'iphone', version: '8.1'},
     {browserName: 'android', version: '4.1'},
-    {browserName: 'android', version: '4.4'},
-
+    {browserName: 'android', version: '4.4'}
   ],
 
   // Maximum number of simultaneous integration tests that should be executed on the remote WebDriver service
