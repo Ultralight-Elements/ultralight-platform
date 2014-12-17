@@ -26,10 +26,16 @@ define({
     {browserName: 'internet explorer', version: '10'},
     {browserName: 'internet explorer', version: '9'},
     {browserName: 'firefox', version: '30'},
+    {browserName: 'firefox', version: '34'},
     {browserName: 'chrome', version: '34'},
+    {browserName: 'chrome', version: '39'},
     {browserName: 'safari', version: '6'},
+    {browserName: 'safari', version: '8'},
     {browserName: 'iphone', version: '7.1'},
-    {browserName: 'android', version: '4.1'}
+    {browserName: 'iphone', version: '8.1'},
+    {browserName: 'android', version: '4.1'},
+    {browserName: 'android', version: '4.4'},
+
   ],
 
   // Maximum number of simultaneous integration tests that should be executed on the remote WebDriver service
