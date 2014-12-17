@@ -26,7 +26,7 @@ define({
     {browserName: 'internet explorer', version: '10'},
     {browserName: 'internet explorer', version: '9'},
     {browserName: 'firefox', version: '27'},
-    {browserName: 'firefox', version: '34', platform: 'Windows 8.1'},
+    {browserName: 'firefox', version: '34', platform: 'Linux'},
     {browserName: 'chrome', version: '34'},
     {browserName: 'chrome', version: '39'},
     {browserName: 'safari', version: '6'},
