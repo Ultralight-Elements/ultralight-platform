@@ -25,6 +25,7 @@ define([
       document.body.removeChild(el)
       nl = document.querySelectorAll('x-one')
       expect(nl.length).to.equal(0)
+      expect(true).to.equal(true)
     })
 
     it('should allow a simple custom element which explicitly sets it\'s prototype to HTMLElement', function(cb) {
