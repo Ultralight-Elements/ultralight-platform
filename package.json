@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "document-register-element": "Ultralight-Elements/document-register-element",
-    "dom4": "^1.0.1"
+    "dom4": "Ultralight-Elements/dom4"
   },
   "devDependencies": {
     "browserify": "^7.0.0",
