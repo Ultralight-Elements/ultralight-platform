@@ -360,4 +360,273 @@ define([
       el.dispatchEvent(event)
     })
   })
+
+  describe('dom4', function() {
+    describe('prepend', function() {
+      it('supports prepend with single node', function() {
+        var div = document.createElement('div')
+        var co = document.createElement('p')
+        var cp = document.createElement('p')
+        document.body.appendChild(div)
+
+        div.appendChild(co)
+        div.prepend(cp)
+        var qs = div.querySelector('p')
+        expect(qs).to.equal(cp)
+
+        document.body.removeChild(div)
+      })
+
+      it('supports prepend with multiple nodes', function(cb) {
+        var div = document.createElement('div')
+        var co = document.createElement('p')
+        var cp1 = document.createElement('p')
+        var cp2 = document.createElement('p')
+        document.body.appendChild(div)
+
+        div.appendChild(co)
+        div.prepend(cp1, cp2)
+        var qs = div.querySelector('p')
+        expect(qs).to.equal(cp1)
+        qs = document.querySelectorAll('p')
+        expect(qs.length).to.equal(3)
+
+        document.body.removeChild(div)
+      })
+    })
+    describe('append', function() {
+      it('supports append with a single node', function(cb) {
+        var div = document.createElement('div')
+        var co = document.createElement('p')
+        var cp = document.createElement('p')
+        document.body.appendChild(div)
+
+        div.appendChild(co)
+        div.append(cp)
+        var qs = div.querySelectorAll('p')
+        expect(qs.length).to.equal(2)
+        expect(div.lastChild).to.equal(cp)
+
+        document.body.removeChild(div)
+      })
+      it('supports append with multiple  nodes', function(cb) {
+        var div = document.createElement('div')
+        var co = document.createElement('p')
+        var cp1 = document.createElement('p')
+        var cp2 = document.createElement('p')
+        document.body.appendChild(div)
+
+        div.appendChild(co)
+        div.append(cp1, cp2)
+        var qs = div.querySelectorAll('p')
+        expect(qs.length).to.equal(3)
+        expect(div.lastChild).to.equal(cp2)
+
+        document.body.removeChild(div)
+      })
+    })
+
+    describe('before', function() {
+      it('supports before with a single node', function(cb) {
+        var div = document.createElement('div')
+        var co = document.createElement('p')
+        var cp = document.createElement('p')
+        document.body.appendChild(div)
+
+        div.appendChild(co)
+        co.before(cp)
+        var qs = div.querySelectorAll('p')
+        expect(qs.length).to.equal(2)
+        expect(div.firstChild).to.equal(cp)
+
+        document.body.removeChild(div)
+      })
+      it('supports before with a multiple nodes', function(cb) {
+        var div = document.createElement('div')
+        var co = document.createElement('p')
+        var cp1 = document.createElement('p')
+        var cp2 = document.createElement('p')
+        document.body.appendChild(div)
+
+        div.appendChild(co)
+        co.before(cp1, cp2)
+        var qs = div.querySelectorAll('p')
+        expect(qs.length).to.equal(3)
+        expect(div.firstChild).to.equal(cp1)
+
+        document.body.removeChild(div)
+      })
+    })
+
+    describe('after', function() {
+      it('supports after with a single node', function(cb) {
+        var div = document.createElement('div')
+        var co = document.createElement('p')
+        var cp = document.createElement('p')
+        document.body.appendChild(div)
+
+        div.appendChild(co)
+        co.after(cp)
+        var qs = div.querySelectorAll('p')
+        expect(qs.length).to.equal(2)
+        expect(div.lastChild).to.equal(cp)
+
+        document.body.removeChild(div)
+      })
+      it('supports after with a multiple nodes', function(cb) {
+        var div = document.createElement('div')
+        var co = document.createElement('p')
+        var cp1 = document.createElement('p')
+        var cp2 = document.createElement('p')
+        document.body.appendChild(div)
+
+        div.appendChild(co)
+        co.after(cp1, cp2)
+        var qs = div.querySelectorAll('p')
+        expect(qs.length).to.equal(3)
+        expect(div.lastChild).to.equal(cp2)
+
+        document.body.removeChild(div)
+      })
+    })
+
+
+
+
+
+    describe('replace', function() {
+      it('supports replace with a single node', function(cb) {
+        var div = document.createElement('div')
+        var co = document.createElement('p')
+        var cp = document.createElement('p')
+        document.body.appendChild(div)
+
+        div.appendChild(co)
+        co.replace(cp)
+        var qs = div.querySelectorAll('p')
+        expect(qs.length).to.equal(1)
+        expect(div.firstChild).to.equal(cp)
+
+        document.body.removeChild(div)
+      })
+      it('supports replace with a multiple nodes', function(cb) {
+        var div = document.createElement('div')
+        var co = document.createElement('p')
+        var cp1 = document.createElement('p')
+        var cp2 = document.createElement('p')
+        document.body.appendChild(div)
+
+        div.appendChild(co)
+        co.replace(cp1, cp2)
+        var qs = div.querySelectorAll('p')
+        expect(qs.length).to.equal(2)
+        expect(div.lastChild).to.equal(cp2)
+
+        document.body.removeChild(div)
+      })
+    })
+
+    describe('remove', function() {
+      it('supports remove', function(cb) {
+        var div = document.createElement('div')
+        var co = document.createElement('p')
+        document.body.appendChild(div)
+
+        div.appendChild(co)
+        var qs = div.querySelectorAll('p')
+        expect(qs.length).to.equal(1)
+        co.remove()
+        qs = div.querySelectorAll('p')
+        expect(qs.length).to.equal(0)
+
+        document.body.removeChild(div)
+      })
+    })
+
+    describe('classList', function() {
+      it('supports add', function() {
+        var div = document.createElement('div')
+        document.body.appendChild(div)
+
+        div.classList.add('foo')
+        var qs = document.querySelectorAll('.foo')
+        expect(qs.length).to.equal(1)
+
+        document.body.removeChild(div)
+      })
+
+      it('supports remove', function() {
+        var div = document.createElement('div')
+        document.body.appendChild(div)
+
+        div.innerHTML = '<p class="foo"></p>'
+        var qs = document.querySelectorAll('.foo')
+        expect(qs.length).to.equal(1)
+        qs[0].classList.remove('foo')
+        qs = document.querySelectorAll('.foo')
+        expect(qs.length).to.equal(0)
+
+        document.body.removeChild(div)
+      })
+
+      it('supports toggle', function() {
+        var div = document.createElement('div')
+        document.body.appendChild(div)
+
+        var qs = document.querySelectorAll('.foo')
+        expect(qs.length).to.equal(0)
+        div.classList.toggle('foo')
+        qs = document.querySelectorAll('.foo')
+        expect(qs.length).to.equal(1)
+        div.classList.toggle('foo')
+        qs = document.querySelectorAll('.foo')
+        expect(qs.length).to.equal(0)
+
+        document.body.removeChild(div)
+      })
+
+      it('supports contains', function() {
+        var div = document.createElement('div')
+        document.body.appendChild(div)
+
+        var qs = document.querySelectorAll('.foo')
+        expect(qs.length).to.equal(0)
+        expect(div.classList.contains('foo')).to.equal(false)
+        div.classList.add('foo')
+        qs = document.querySelectorAll('.foo')
+        expect(qs.length).to.equal(1)
+        expect(div.classList.contains('foo')).to.equal(true)
+
+        document.body.removeChild(div)
+      })
+    })
+
+    describe('closest', function() {
+      it('Returns the first inclusive ancestor ', function(cb) {
+        var div = document.createElement('div')
+        var pdiv = document.createElement('div')
+        var cp = document.createElement('p')
+        pdiv.appendChild(cp)
+        div.appendChild(pdiv)
+        document.body.appendChild(div)
+
+        expect(cp.closest('div')).to.equal(pdiv)
+        expect(pdiv.closest('div')).to.equal(pdiv)
+      })
+    })
+
+    describe('matches', function() {
+      it('returns true if matching selectors against element\'s root yields element, and false otherwise', function(cb) {
+        var div = document.createElement('div')
+        var pdiv = document.createElement('div')
+        var cp = document.createElement('p')
+        pdiv.appendChild(cp)
+        div.appendChild(pdiv)
+        document.body.appendChild(div)
+
+        expect(cp.matches('p')).to.equal(true)
+        expect(pdiv.matches('div')).to.equal(true)
+      })
+    })
+  })
 })
