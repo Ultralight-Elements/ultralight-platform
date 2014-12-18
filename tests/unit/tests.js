@@ -612,6 +612,8 @@ define([
 
         expect(cp.closest('div')).to.equal(pdiv)
         expect(pdiv.closest('div')).to.equal(pdiv)
+
+        document.body.removeChild(div)
       })
     })
 
@@ -626,6 +628,8 @@ define([
 
         expect(cp.matches('p')).to.equal(true)
         expect(pdiv.matches('div')).to.equal(true)
+
+        document.body.removeChild(div)
       })
     })
   })
