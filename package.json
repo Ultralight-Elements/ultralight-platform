@@ -1,6 +1,6 @@
 {
   "name": "ultralight-platform",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "custom element polyfill",
   "main": "dist/ultralight-platform.js",
   "repository": {

@@ -1,7 +1,7 @@
 {
   "name": "ultralight-platform",
   "description": "custom elements in pure vanillajs with tiny polyfill",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "dist/ultralight-plaform.js",
   "license": "MIT",
   "keywords": [
