@@ -12,7 +12,7 @@ The ultralight-platform, as well as all Ultralight Elements, are built using [br
 
 Ultralight Elements utilize only the Custom Elements specification and widely supported vanilla DOM standards for building Web Components, eshewing Shadom DOM, HTML Imports, & Templates.
 
-## DOM Methods/Properties White List
+## DOM Methods/Properties Whitelist
 This list is largely derived from the work of ppk, including the [DOM Core](http://quirksmode.org/dom/core/) and [DOM Core Mobile](http://quirksmode.org/dom/core/mobile.html) compatibility tables.
 
 ### Creating Elements
@@ -204,5 +204,122 @@ ownerDocument
 ^   only available on >= IE9
 *   available on IE 8, with caveats
 **  available on >= IE9, with caveats
-!   requires polyfill
+!   requires polyfill (provided by ultralight-platform)
+```
+
+## DOM HTML Methods/Properties Whitelist
+This list is largely derived from the work of ppk, including the [DOM Compatibility - HTML](http://www.quirksmode.org/dom/html/) and [DOM Mobile Compatibilty - HTML](http://www.quirksmode.org/dom/html/mobile.html) tables.
+
+## innerHTML And Friends
+```js
+innerHTML **
+```
+```js
+insertAdjacentHTML()
+```
+```js
+outerHTML
+```
+```js
+textContent ^ (innerText for IE <= 8)
+```
+## HTML Element Properties
+```js
+classList !
+```
+```js
+className
+```
+```js
+id
+```
+## Select Boxes
+```js
+add(opt,opt)
+```
+```js
+add(opt, idx)
+```
+```js
+remove(idx)
+```
+## Tables
+```js
+caption
+```
+```js
+cellIndex
+```
+```js
+cells[]
+```
+```js
+cellSpacing
+```
+```js
+createCaption()
+```
+```js
+createTFoot()
+```
+```js
+createTHead()
+```
+```js
+deleteCaption()
+```
+```js
+deleteCell()
+```
+```js
+deleteRow()
+```
+```js
+deleteTFoot()
+```
+```js
+deleteTHead()
+```
+```js
+insertCell()
+```
+```js
+insertRow()
+```
+```js
+rowIndex
+```
+```js
+rows[]
+```
+```js
+sectionRowIndex
+```
+```js
+tBodies[]
+```
+```js
+tFoot
+```
+```js
+tHead
+```
+## Document
+```js
+document.body
+```
+```js
+document.compatMode
+```
+```js
+document.defaultView ^
+```
+```js
+document.doctype ^
+```
+```
+^   only available on >= IE9
+*   available on IE 8, with caveats
+**  available on >= IE9, with caveats
+!   requires polyfill (provided by ultralight-platform)
 ```
