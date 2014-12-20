@@ -199,8 +199,3 @@ document.documentElement
 ```js
 ownerDocument
 ```
-
-^  only available on >= IE 9
-*  caveats with <= IE 8
-**  caveats with >= IE 9
-!  requires polyfill 
