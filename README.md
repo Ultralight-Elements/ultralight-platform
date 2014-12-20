@@ -206,7 +206,7 @@ ownerDocument
 **  available on >= IE9, with caveats
 !   requires polyfill (provided by ultralight-platform)
 ```
-
+***
 ## DOM HTML Methods/Properties Whitelist
 This list is largely derived from the work of ppk, including the [DOM Compatibility - HTML](http://www.quirksmode.org/dom/html/) and [DOM Mobile Compatibilty - HTML](http://www.quirksmode.org/dom/html/mobile.html) tables.
 
