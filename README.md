@@ -16,187 +16,187 @@ Ultralight Elements utilize only the Custom Elements specification and widely su
 This list is largely derived from the work of ppk, including the [DOM Core](http://quirksmode.org/dom/core/) and [DOM Core Mobile](http://quirksmode.org/dom/core/mobile.html) compatibility tables.
 
 ### Creating Elements
-```js
+```
 document.createElement()
 ```
-```js
+```
 document.createTextNode()
 ```
 ### Getting Elements
-```js
+```
 getElementById()
 ```
-```js
+```
 getElementsByClassName() ^
 ```
-```js
+```
 getElementsByTagName()
 ```
-```js
+```
 querySelector() *
 ```
-```js
+```
 querySelectorAll() *
 ```
 ### Node Information
-```js
+```
 nodeName
 ```
-```js
+```
 nodeType
 ```
-```js
+```
 nodeValue
 ```
 ### DOM Tree
-```js
+```
 childNodes[] *
 ```
-```js
+```
 firstChild *
 ```
-```js
+```
 hasChildNodes()
 ```
-```js
+```
 lastChild *
 ```
-```js
+```
 nextSibliing *
 ```
-```js
+```
 parentNode
 ```
-```js
+```
 previousSibling *
 ```
 ### DOM Traversal
-```js
+```
 childElementCount ^
 ```
-```js
+```
 children[] *
 ```
-```js
+```
 firstElementChild ^
 ```
-```js
+```
 lastElementChild ^
 ```
-```js
+```
 nextElementSibling ^
 ```
-```js
+```
 previousElementSibling ^
 ```
 ### Node Manipulation
-```js
+```
 appendChild()
 ```
-```js
+```
 cloneNode()
 ```
-```js
+```
 insertBefore()
 ```
-```js
+```
 removeChild()
 ```
-```js
+```
 replaceChild()
 ```
 ### New Node Manipulation Methods
-```js
+```
 after() !
 ```
-```js
+```
 append() !
 ```
-```js
+```
 before() !
 ```
-```js
+```
 prepend() !
 ```
-```js
+```
 remove() !
 ```
-```js
+```
 replace() !
 ```
 ### Text Data
-```js
+```
 appendData()
 ```
-```js
+```
 data
 ```
-```js
+```
 deleteData()
 ```
-```js
+```
 normalize()
 ```
-```js
+```
 replaceData()
 ```
-```js
+```
 splitText() *
 ```
-```js
+```
 substringData()
 ```
-```js
+```
 wholeText ^
 ```
 ### Attributes
-```js
+```
 attributes[key] **
 ```
-```js
+```
 document.createAttribute()
 ```
-```js
+```
 getAttribute() **
 ```
-```js
+```
 getAttributeNode() **
 ```
-```js
+```
 hasAttribute()
 ```
-```js
+```
 name
 ```
-```js
+```
 removeAttribute()
 ```
-```js
+```
 removeAttributeNode()
 ```
-```js
+```
 setAttribute()
 ```
-```js
+```
 setAttributeName()
 ```
-```js
+```
 value
 ```
 ### Miscellaneous
-```js
+```
 compareDocumentPosition() ^
 ```
-```js
+```
 contains()
 ```
-```js
+```
 document.createDocumentFragment()
 ```
-```js
+```
 document.documentElement
 ```
-```js
+```
 ownerDocument
 ```
 
@@ -211,110 +211,110 @@ ownerDocument
 This list is largely derived from the work of ppk, including the [DOM Compatibility - HTML](http://www.quirksmode.org/dom/html/) and [DOM Mobile Compatibilty - HTML](http://www.quirksmode.org/dom/html/mobile.html) tables.
 
 ## innerHTML And Friends
-```js
+```
 innerHTML **
 ```
-```js
+```
 insertAdjacentHTML()
 ```
-```js
+```
 outerHTML
 ```
-```js
+```
 textContent ^ (innerText for IE <= 8)
 ```
 ## HTML Element Properties
-```js
+```
 classList !
 ```
-```js
+```
 className
 ```
-```js
+```
 id
 ```
 ## Select Boxes
-```js
+```
 add(opt,opt)
 ```
-```js
+```
 add(opt, idx)
 ```
-```js
+```
 remove(idx)
 ```
 ## Tables
-```js
+```
 caption
 ```
-```js
+```
 cellIndex
 ```
-```js
+```
 cells[]
 ```
-```js
+```
 cellSpacing
 ```
-```js
+```
 createCaption()
 ```
-```js
+```
 createTFoot()
 ```
-```js
+```
 createTHead()
 ```
-```js
+```
 deleteCaption()
 ```
-```js
+```
 deleteCell()
 ```
-```js
+```
 deleteRow()
 ```
-```js
+```
 deleteTFoot()
 ```
-```js
+```
 deleteTHead()
 ```
-```js
+```
 insertCell()
 ```
-```js
+```
 insertRow()
 ```
-```js
+```
 rowIndex
 ```
-```js
+```
 rows[]
 ```
-```js
+```
 sectionRowIndex
 ```
-```js
+```
 tBodies[]
 ```
-```js
+```
 tFoot
 ```
-```js
+```
 tHead
 ```
 ## Document
-```js
+```
 document.body
 ```
-```js
+```
 document.compatMode
 ```
-```js
+```
 document.defaultView ^
 ```
-```js
+```
 document.doctype ^
 ```
 ```
